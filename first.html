@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="부산외국어대학교 학생포털시스템">
+    <meta name="description" content="부산외국어대학교 학생포털시스템입니다.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta property="viewport" content="website">
+    <meta property="viewport" content="부산외국어대학교 학생포털시스템">
+    <meta property="viewport" content="/Common/img/t_logo.jpg">
+    <title>부산외국어대학교 학생포털시스템</title>
+    <link type="text/css" rel="stylesheet" href="/common/css/jquery-ui.css?s=20240130091344">
+    <link href="/common/css/icommon.css" rel="stylesheet">
+    <link href="/common/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="/site/resource/www/css/style.css" rel="stylesheet">
+    <link href="/site/resource/www/css/table-responsive.css" rel="stylesheet">
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/ibootstrap.min.js"></script>
+    <script src="/site/resource/www/js/script.js"></script>
+    <script src="/common/js/popper.js"></script>
+    <script src="/common/js/jquery-ui.min.js"></script>
+    <script src="/common/js/WebForms/WebForms.js"></script>
+    <script src="/common/js/IFWCommon.js?s=2024013009134422"></script>
+    <!-- 하이차트용 -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/sankey.js"></script>
+    <script src="https://code.highcharts.com/modules/organization.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="/Common/js/bootbox.js"></script>
+    <script src="/Common/js/message-manager.js"></script>
+    <!-- Fileupload 멀티업로드용 -->
+    <script src="/Common/js/jquery.MultiFile.js" type="text/javascript"></script>
+    <!-- jsTree용 -->
+    <script src="/Common/Js/jquery.cookie.js"></script>
+    <script src="/common/Js/jstree/jstree.js"></script>
+    <script type="text/script" src="/Common/Js/pwConfimDialog.js?s=20240130091344"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+    <style type="text/css"></style>
+    <script type="text/script">
+        function getCookie(name) {
+            var nameofCookie = name + "=";
+            var x = 0;
+
+            while (x <= document.cookie.length) {
+                var y = (x + nameOfCookie.length);
+                if (document.cookie.substring(x, y) == nameOfCookie) {
+                    if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+                    endOfCookie = document.cookie.length;
+                    console.log(unescape(document.cookie.substring(y, endOfCookie)));
+                    return unescape(document.cookie.substring(y, endOfCookie));
+                }
+                x = document.cookie.indexOf(" ", x) + 1;
+                if (x == 0)
+                break;
+            }
+            return "";
+        }
+        function setCookie(name, value, expiredays) {
+            var todayDate = new Date();
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" +
+            todayDate.toGMTString() + ";"
+
+        }
+
+        function closePopupLayer(strLayerNO) {
+            setCookie(strLayerNO, "done", 1);
+
+            var pop = document.getElementById(strLayerNO);
+            pop.style.display = "none";
+        }
+        function popMRD(url) {
+            openWin = window.open(url, "MRD", "width=1200, height=800, scrollbars=yes, resizable=yes");
+            openWin.focus();
+            return false;
+        }
+    </script>
+    <link type="text/css" rel="stylesheet" href="https://chat.makebot.ai/plugin/default.css?v=1706573023">
+    <link type="text/css" rel="stylesheet" href="https://partner.makebot.ai/chat/pusanfuniv/site.css?v=1706573023">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="https://chat.nakebot.ai/plugin?key=Qntks1aq8&t=1706573622988"></script>
+</head>
+<body oncontextmenu="return false">
+    <script language="javascript" type="text/javascript"></script>
+    <form method="post" action="./default.aspx?ReturnUrl=%2f" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="_EVENTTARGET" id="__EVENTTARGET" value>
+            <input type="hidden" name="_EVENTARGUMENT" id="__EVENTARGUMENT" value>
+        </div>
+        <script type="text/javascript">
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function _doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTAEGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 쪽 프레임워크를 로드하지 못했습니다.');
+        </script>
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+        </div>
+        <button class="d-none" onclick="return false;" title="Tempbutton"></button>
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestNamager._initialize('ctl00$ScriptManager1', 'form1', [], [], [], 90, 'ct100');
+        </script>
+        <div id="accessibility">
+            <h1 class="d-none">Skip Menu</h1>
+            <ul>
+                <li>
+                    <a href="#top-menu">주메뉴 바로가기</a>
+                </li>
+                <li>
+                    <a href="#content">본문 바로가기</a>
+                </li>
+                ::after
+            </ul>
+        </div>
+        <div id="header" class="navbar-expend active">
+            <div class="log login-box2">
+                <div class="input-group mr-0 mr-sm-1">
+                    <input name="ct100$txtUserID" type="text" id="txtUserID" class="form-control form-control-sm"
+                    placeholder="학번" aria-label="id" aria-describedby="id">
+                    <input name="ct100$txtPasswd" type="password" id="txtPasswd" class="form-control form-control-sm"
+                    placeholder="비밀번호" aria-label="password" aria-desribledby="password">
+                </div>
+                <input type="submit" name="ct100$btnLogin" value="로그인" id="btnLogin" class="btn btn-sm
+                btn-warning mr-1">
+                <input type="submit" name="ct100$btn아이디찾기" value="학번찾기" onclick="return findId();"
+                id="btn아이디찾기" class="btn btn-sm btn-outline-secondary mr-1">
+                <input type="submit" name="ct100$btn비밀번호찾기" value="비밀번호찾기" onclick="return findPass();"
+                id="btn비밀번호찾기" class="btn btn-sm btn-outline-secondary">
+            </div>
+            <nav class="navbar">
+                <a href="/Default.aspx" class="d-lg-nane header-logo" tabindex="-1">
+                    ::before
+                    " 학생포털시스템 "
+                    <span>BUFS Student Portal</span>
+                </a>
+                <div class="btn-switch btn-group" role="group" aria-label="Basic example">
+                    <input type="submit" name="ct100$tn학부" value="학부" id="btn학부" class="btn selected">
+                    <input type="submit" name="ct100$btn대학원" value="대학원" id="btn대학원" class="btn">
+                </div>
+                <button id="sidebarToggleTop" class="btn btn-link active" tabindex="0" onclick="return false;">
+                <span></span>
+                <span></span>
+                <span></span>
+                </button>
+             </nav>
+        </div>
+        <div id="sidebar" class="navbar-nav visible">
+            <div class="sidebar">
+                <div class="sidebar-brand">
+                    <a href="/Default.aspx" class="navbar-brand" tabindex="-1">
+                        "학생포털시스템"
+                        <span>BUFS Student Portal</span>
+                    </a>
+                    <a href="#" class="navbar-close">
+                        <i class="meterial-icons">close</i>
+                        <span class="d-none">전체 메뉴 닫기</span>
+                    </a>
+                </div>
+                <div class="sidemenu">
+                    <ul class="navbar-nav accordion" id="accordionSidebar">
+                        <li id="li0946">
+                            <a href="#" data-toggle="collapse" data-target="#lv1Menu0946" aria-expaned="false" aria-controls="lv1Menu0006">
+                                "학적"
+                                ::after
+                            </a> 
+                            <div id="lv1Menu0946" class="collapse" data-parent="#accordionSidebar">
+                                <ul id="lv2Sidebar0946">
+                                    <li id="li0951" step1menu="0946" step2menu="0951">
+                                        <a href="/Information/SAHJ1010.aspx?mc=0951">학적변동 안내</a>
+                                    </li>
+                                </ul>
+                            </div>
+                         </li>
+                         <li id="li0006">
+                            <a href="#" data-toogle="collapse" data-target="#lv1Menu0006" aria-expanded="false"
+                            aria-controls="lv1Menu0006">
+                            "장학 / 복지"
+                            :: after
+                        </a>
+                        <div id="lv1Menu0006" class="collapse" data-parent="#accordionSidebar">
+                            <ul id="lv2Sidebar0006">
+                                <li id="li0935" step1menu="0006" step2menu="0935">
+                                    <a href="Information/SAJH1020.ASPX?mc=0935">장학금 안내</a>
+                             </li>
+                            </ul>
+                        </div>
+                         </li>
+                         <li id="li0984">
+                            <a href="#" data-toggle="collapse" data-target="#lv1Menu0984" aria-expanded="false"
+                            aria-controlls="lv1Menu0984">
+                        "교육과정"
+                        ::after
+                          </a>
+                          <div id="lv1Menu0006" class="collapse" data-parent="#accordionSidebar">
+                            <ul id="lv2Sidebar0006">
+                                <li id="li0935" step1menu="0006" step2menu="0935">
+                                    <a href="/Information/SAJH1020.ASPX?mc=0935">장학금 안내</a>
+                                </li>
+                            </ul>
+                          </div>
+                         </li> 
+                         <li id="li0984">
+                            <a href="#" data-toggle="collapse" data-target="#lv1Menu0984" aria-expandeded="false"
+                            aria-controlls="lv1Menu0984">
+                            "교육과정"
+                            ::after
+                        </a>
+                        <div id="lv1Menu0984" class="collapse" data-parent="#accordionSidebar">
+                            <ul id="lv2Sidebar0984">
+                                <li id="li1007" step1menu="0984" step2menu="1007">
+                                    <a href="/Information/LESN5010.ASPX?mc=1007">연도별 교육과정 안내</a>
+                                </li>
+                            </ul>
+                        </div>
+                          </li>
+                          <li id="li0800">
+                            <a href="#" data-toggle="collapse" data-target="#lv1Menu0800" aria-expanded="false"
+                            aria-controls="lv1Menu0984">
+                            "교육과정"
+                            ::after
+                        </a>
+                        <div id="lv1Menu0984" class="collapse" data-parent="#accordionSidebar">
+                            <ul id="lv2sidebar0984">
+                                <li id="li1007" step1menu="0984" step2menu="1007">
+                                    <a href="/Information/LESN5010.ASPX?mc=1007">연도별 교육과정 안내</a>
+                                </li>
+                            </ul>
+                        </div>
+                          </li>
+                          <li id="li0800">
+                            <a href="#" data-toggle="collapse" data-target="#lv1Menu0800" aria-expanded="false"
+                            aria-controls="lv1Menu0800">
+                            "수업"
+                            ::after
+                        </a>
+                        <div id="lv1Menu0800" class="collapse" data-parent="#accordionSidebar">
+                            <ul id="lv2Sidebar0800">
+                                <li id="li0966" step1menu="0800" step2menu="0966">
+                                    <a href="/Information/LESN6020.ASPX?mc=0966">수강신청 안내</a>
+                                </li>
+                                <li id="li0969" step1menu="0800" step2menu="0969">
+                                    <a href="/Information/LESn7050.ASPX?mc=0969">전자출결 안내</a>
+                                </li>
+                            </ul>
+                        </div>
+                          </li>
+                          <li id="li0986">
+                            <a href="#" data-toggle="collapse" data-target="#lv1Menu0986" aria-expanded="false"
+                            aria-controls="lv1Menu0986">
+                            "성적"
+                            ::after
+                        </a>
+                        <div id="lv1Menu0986" class="collapse" data-parent="accordionSidebar">
+                            <ul id="lv2Sidebar0986">
+                                <li id="li1015" step1menu="0986" step2menu="1015">
+                                    <a href="/Information/SCR01010.ASPX?mc=1015">성적처리기준</a>
+                                </li>
+                            </ul>
+                            </div>
+                          </li>
+                          <li id="li0987">
+                            <a href="#" data-toggle="collapse" data-target="#lv1Menu0987" aria-expanded="false"
+                            aria-controls="lv1Menu0987">
+                            "등록"
+                            ::after
+                        </a>
+                        <div id="lv1Menu0987" class="collapse" data-parent="accordionSidebar">
+                            <ul id="lv2Sidebar0987">
+                                <li id="li1023" step1menu="0987" step2menu="1023">
+                                    <a href="/Information/REGI1010.ASPX?mc=1023">등록금 납부 안내</a>
+                                </li>
+                                <li id="li1024" step1menu="0987" step2menu="1024">
+                                    <a href="/Information/REGI1020.ASPX?mc=1024">등록금 반환 기준</a>
+                                </li>
+                    </ul>
+                </div>
+                </li>
+                <li id="li0988">
+                    <a href="#" data-toggle="collapse" data-target="#lv1Menu0988" aria-expanded="false"
+                    aria-controls="lv1Menu0988">
+                    "등록"
+                    ::after
+                </a>
+                <div id="lv1Menu0988" class="collapse" data-parent="accordionSidebar">
+                    <ul id="lv2Sidebar0988">
+                        <li id="li1039" step1menu="0988" step2menu="1039">
+                            <a href="/Information/GRAD2020.aspx?mc=1039">졸업 안내</a>
+                        </li>
+            </ul>
+        </div>
+        </li>
+        <li id="li1105">
+            <a href="#" data-toggle="collapse" data-target="#lv1Menu1105" aria-expanded="false"
+            aria-controls="lv1Menu1105">
+            "교직"
+            ::after
+        </a>
+        <div id="lv1Menu1105" class="collapse" data-parent="accordionSidebar">
+            <ul id="lv2Sidebar1105">
+                <li id="li1106" step1menu="1105" step2menu="1106">
+                    <a href="/Information/LESN5050.ASPX?mc=1106">교직과정 안내</a>
+                </li>
+    </ul>
+</div>
+</li>
+<li id="li0428">
+    <a href="#" data-toggle="collapse" data-target="#lv1Menu0428" aria-expanded="false"
+    aria-controls="lv1Menu0428">
+    "교류"
+    ::after
+</a>
+<div id="lv1Menu0428" class="collapse" data-parent="accordionSidebar">
+    <ul id="lv2Sidebar0428">
+        <li id="li0971" step1menu="0428" step2menu="0971">
+            <a href="/Information/IAGG1010.ASPX?mc=0971">국내교류 프로그램 소개</a>
+        </li>
+        <li id="li0972" step1menu="0428" step2menu="0972">
+            <a href="/Information/IAGG1020.ASPX?mc=0972">해외교류 프로그램 소개</a>
+        </li>
+</ul>
+</div>
+</li>
+<li id="li0991">
+    <a href="/CMMT/CMMT2020.ASPX?mc=0991" data-target="#lv1Menu0991" aria-expanded="false"
+    aria-controls="lv1Menu0991">
+    "자료실"
+    ::after
+</a>
+<div id="lv1Menu0991" class="collapse" data-parent="accordionSidebar"></div>
+    <ul id="lv2Sidebar0987">
+        </li>
+        ::after
+        </ul>
+            </div>
+        </div>
+        <input type="hidden" name="ct100$menucode" id="menucode">
+        </div>
+        <!--Left Menu-->
+        <div class="content-container d-flex flex-column">
+            <!--Contents-->
+            <div id="content" class="container-fluid">
+                <div id="Commonloading"></div>
+                <input type="hidden" name="ct100$mainContent$hdn구분" id="mainContent_hdn구분">
+                <div class="board-wrap">
+                    <div class="card schedule-card">
+                        <div class="card-header">
+                            <h3 class="tit-h3">학사일정</h3>
+                            <a id="mainContent_hlnk학사일정더보기" class="material-icons" href="javascript:viewHaksa('')">add</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="s-wrap">
+                                <div class="s-tit">
+                                    <span id="mainContent_lbl년도월" class="s-year">2024.01</span>
+                                    <span id="mainContent_lbl일" class="s-date">30</span>
+                                </div>
+                                <div class="s-tit">
+                                    <span id="mainContent_lbl년도월" class="s-year">2024-01</span>
+                                    <span id="mainContent_lbl일" class="s-date">30</span>
+                                </div>
+                                <div class="s-con">
+                                    <ul class="s-list">
+                                        <li class="s-item">
+                                            <div class="item-date">01-08 ~ 01-19</div>
+                                            <div class="item-title">2024학년도 1학기 다전공 신청 기간</div>
+                                        </li>
+                                        <li class="s-item">
+                                            <div class="item-date">01-08 ~ 01-31</div>
+                                            <div class="item-title">2024학년도 1학기 재입학추가모집</div>
+                                        </li>
+                                        <li class="s-item">
+                                            <div class="item-date">01-08 ~ 01-12</div>
+                                            <div class="item-title">학사학위 취득 유예 신청</div>
+                                        </li>
+                                        <li class="s-item">
+                                            <div class="item-date">01-08 ~ 02-29</div>
+                                            <div class="item-title">휴학 및 복학 신청 기간</div>
+                                        </li>
+                                        <li class="s-item">
+                                            <div class="item-date">01-08 ~ 01-12</div>
+                                            <div class="item-title">2024학년도 1학기 전부(과) 신청 및 제출 기간</div>
+                                        </li>
+                                        ::after
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 학사공지-->
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="board-list">
+                                <li class="board-item">
+                                    <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                                    aca&wr id=702" target="_blank">
+                                    <div class="item-title">2024학년도 1학기 OCU 교과목 수강 안내</div>
+                                    <time class="item-date">2024.01.30</time>
+                                </a>
+                                </li>
+                                <li class="board-item">
+                                    <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                                    aca&wr id=701" target="_blank">
+                                <div class="item-title">2024학년도 신입생 글로벌소통역량과정 영어진단평가 안내
+                                </div>
+                                <time class="item-date">2024.01.26</time>
+                                </a>
+                                </li>
+                                <li class="board-item">
+                                    <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                                    aca&wr id=700" target="_blank">
+                                <div class="item-title">2024학년도 1학기 전부(과) 합격자 안내
+                                </div>
+                                <time class="item-date">2024.01.26</time>
+                                </a>
+                                </li>
+                                <li class="board-item">
+                                    <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                                    aca&wr id=699" target="_blank">
+                                <div class="item-title">2024학년도 1학기 장바구니 신청 안내
+                                </div>
+                                <time class="item-date">2024.01.26</time>
+                                </a>
+                                </li>
+                                <li class="board-item">
+                                    <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                                    aca&wr id=698" target="_blank">
+                                <div class="item-title">2024학년도 1학기 수업시간표 안내(0130 기준)
+                                </div>
+                                <time class="item-date">2024.01.26</time>
+                                </a>
+                                </li>
+                                <li class="board-item">
+                                    <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                                    aca&wr id=697" target="_blank">
+                                <div class="item-title">[국내교류수학] 2024학년도 1학기 한국해양대학교 교류 수학 안내
+                                </div>
+                                <time class="item-date">2024.01.24</time>
+                                </a>
+                                </li>
+                                ::after
+                            </ul>
+                        </div>
+                        <div class="card-footer p-0">
+                            <a id="mainContent_hink학사공지" class="btn btn-warning d-clock text-dark" href="https://
+                            www.bufs.ac.kr/bbs/board.php?bo table=notice aca" target="_blank">
+                        <i class="material-icons">add</i>
+                        <span id="mainContent_lbl학사공지">학사공지</span>
+                        "더보기"
+                        </a>
+                        </div>
+                    </div>
+                    <!-- 장학공지 -->
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <ul class="board-list">
+                                <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice sch&wr id=290"
+                                target="_blank">
+                            <div class="item-title">2024년 상반기 대학(원)생 학자금 대출 이자 지원 안내</div>
+                            <time class="item-date">2024.01.24</time>
+                            </a>
+                            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice sch&wr id=289"
+                                target="_blank">
+                            <div class="item-title">2024학년도 동암장악회 장학생 선발 안내</div>
+                            <time class="item-date">2024.01.19</time>
+                            </a>
+                            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice sch&wr id=288"
+                                target="_blank">
+                            <div class="item-title">2024학년 상반기 군산시 대학생 학자금대출 이자지원 안내</div>
+                            <time class="item-date">2024.01.15</time>
+                            </a>
+                            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice sch&wr id=287"
+                                target="_blank">
+                            <div class="item-title">2023년 하반기 울산광역시 대학생 학자금대출 이자지원 사업</div>
+                            <time class="item-date">2024.01.10</time>
+                            </a>
+                            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice sch&wr id=286"
+                                target="_blank">
+                            <div class="item-title">2024학년도 농림축산식품부 장학금 신청 안내</div>
+                            <time class="item-date">2024.01.09</time>
+                            </a>
+                            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice sch&wr id=285"
+                                target="_blank">
+                            <div class="item-title">2024학년도 KRX DREAM 대학생 장학생 선발안내</div>
+                            <time class="item-date">2024.01.09</time>
+                            </a>
+                            ::after
+                            </ul>
+                        </div>
+                        <div class="card-footer p-0">
+                            <a id="mainContent_hlnk장학공지" class="btn btn-primary d-block text-white" href="https://
+                            www.bufs.ac.kr/bbs/board.php?bo table=notice sch" target="_black">
+                        <i class="material-icons">add</i>
+                        <span id="mainContent_lbl장학공지">장학공지</span>
+                        "더보기"
+                        </a>
+                        </div>
+                    </div>
+                    <!-- 취업공지 -->
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="board-list">
+                                <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice emp&wr id=6047"
+                                target="_blank">
+                            <div class="item-title">국무조정실.국무총리비서실 청년인턴 채용</div>
+                            <time class="item-date">2024.01.30</time>
+                            </a>
+                            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice emp&wr id=6046"
+                            target="_blank">
+                        <div class="item-title">부산 실전형 사이버훈련장 침해사고 대응훈련 교육생 모집
+                            (리버스코드 엔지니어링/YARA 기반 정규 표현식 활용)
+                        </div>
+                        <time class="item-date">2024.01.30</time>
+                        </a>
+                        <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice emp&wr id=6045"
+                        target="_blank">
+                    <div class="item-title">한국소프트웨어기술진흥협회 SW개발자 양성과정 교육생 모집</div>
+                    <time class="item-date">2024.01.30</time>
+                    </a>
+                    <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice emp&wr id=6044"
+                    target="_blank">
+                <div class="item-title">엠로 신입사원 공개채용</div>
+                <time class="item-date">2024.01.30</time>
+                </a>
+                <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice emp&wr id=6043"
+                target="_blank">
+            <div class="item-title">삼성생명 금융아카데미 24.2월 모집</div>
+            <time class="item-date">2024.01.30</time>
+            </a>
+            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice emp&wr id=6042"
+            target="_blank">
+        <div class="item-title">지티엑스에이운영 경력직원 공개채용</div>
+        <time class="item-date">2024.01.30</time>
+        </a>
+        ::after
+                            </ul>
+                        </div>
+                        <div class="card-footer text-muted p-0">
+                            <a id="maincontent_hlnk취업공지" class="btn btn-primary d-block text-white" href="https://
+                            www.bufs.ac.kr/bbs/board.php?bo table=notice emp" target="_blank">
+                        <i class="material-icons">add</i>
+                        <span id="mainContent_lbl취업공지">취업공지</span>
+                        "더보기"
+                        </a>
+                        </div>
+                    </div>
+                    <!-- 일반공지 -->
+                    <div class="card-footer text-muted p-0">
+                        <a id="mainCOntent_hlnk취업공지" class="btn btn-primary d-block text-white" href="https://
+                        www.bufs.ac.kr/bbs/board.php?bo table=notice emp" target="_blank">
+                    <i class="material-icons">add</i>
+                    <span id="mainContent_lbl취업공지">취업공지</span>
+                    "더보기"
+                    </a>
+                    </div>
+                </div>
+                <!-- 일반공지-->
+                <div class="card text-center">
+                    <div class="card-body">
+                        <ul class="board-list">
+                            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                            uni&wr id=1764" target="_blank">
+                        <div class="item-title">2월 그룹심리검사 일정 안내</div>
+                        <time class="item-date">2024.01.30</time>
+                        </a>
+                        <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                        uni&wr id=1763" target="_blank">
+                    <div class="item-title">외국인 유학생 모집 대행사 모집 공고</div>
+                    <time class="item-date">2024.01.30</time>
+                    </a>
+                    <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                    uni&wr id=1762" target="_blank">
+                <div class="item-title">2024 글로벌자유전공학부 설명회(교육과정 및 수강신청 안내)</div>
+                <time class="item-date">2024.01.30</time>
+                </a>
+                <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                uni&wr id=1761" target="_blank">
+            <div class="item-title">2024학년도 2학기 토요대학(3+1) 국제교양대학 교환학생 선발 안내</div>
+            <time class="item-date">2024.01.29</time>
+            </a>
+            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+            uni&wr id=1760" target="_blank">
+        <div class="item-title">외국인 유학생 모집 대행사 선정 공고</div>
+        <time class="item-date">2024.01.29</time>
+        </a>
+        <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+        uni&wr id=1764" target="_blank">
+    <div class="item-title">무선 AP 교체에 따른 무선인터넷 중단 안내</div>
+    <time class="item-date">2024.01.23</time>
+    </a>
+    ::after
+                        </ul>
+                    </div>
+                    <div class="card-footer text-muted p-0">
+                        <a id="mainContent_hlnk일반공지" class="btn btn-primary d-block text-white" href="https://
+                        www.bufs.ac.kr/bbs/board.php?bo table=notice uni" target="_blank">
+                    <i class="material=icons">add</i>
+                    <span id="mainContent_lbl일반공지">일반공지</span>
+                    "더보기"
+                    </a>
+                    </div>
+                </div>
+                <!-- 코로나19 공지-->
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="board-list">
+                            <a class="board-link" href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice
+                            cov&wr id=55" target="_blank">
+                        <div class="item-title">안전한 일상회복을 위한 [개인방역 5대 중요수칙]</div>
+                        <time class="item-date">2023.02.20</time>
+                        </a>
+                        ::after
+                        </ul>
+                    </div>
+                    <div class="card-footer text-muted p-0">
+                        <a id="mainContent_hlnk코로나19공지" class="btn btn-danger d-block text-white"
+                        href="https://www.bufs.ac.kr/bbs/board.php?bo table=notice cov" target="_blank">
+                    <i class="material-icons">add</i>
+                    <span id="mainContent_lbl코로나19공지">코로나19공지</span>
+                    "더보기"
+                    </a>
+                    </div>
+                </div>
+                <div class="card icon-card">
+                    <div class="card-body">
+                        <ul class="icon-btn">
+                            <li>
+                                <a href="https://pufs.certpia.com/" target="_blank">
+                                    <img src="/site/resource/www/images/qb-icon8.png" alt="인터넷 증명발급">
+                                    <p>인터넷 증명발급</p>
+                                </a>
+                                ::after
+                            </li>
+                            <li>
+                                <a href="https://eport.bufs.ac.kr/" target="_blank">
+                                    <img src="/site/resource/www/images/qb-icon9.png" alt="NOMAD 인재시스템">
+                                    <p>NOMAD 인재시스템</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://eclass.bufs.ac.kr/" target="_blank">
+                                    <img src="/site/resource/www/images/qb-icon6.png" alt="e-Class">
+                                    <p>e-Class</p>
+                                </a>
+                                ::after
+                            </li>
+                            <li>
+                                <a href="https://eclass.bufs.ac.kr/" target="_blank">
+                                    <img src="/site/resource/www/images/qb-icon10.png" alt="취업포털시스템">
+                                    <p>취업포털시스템</p>
+                                </a>
+                            </li>
+                            ::after
+                        </ul>
+                    </div>
+                </div>
+                <div class="card icon-card">
+                    <div class="card-body">
+                        <ul class="icon-btn">
+                            <li>
+                                <a href="https://library.bufs.ac.kr/" target="_blank">
+                                    <img src="/site/resource/www/images/qb-icon11.png" alt="중앙도서관">
+                                    <p>중앙도서관</p>
+                                </a>
+                                ::after
+                            </li>
+                            <li>
+                                <a id="mainCOntent_hlnk수강신청" target="http://sugang.bufs.ac.kr" target="_blank">
+                                    <img src="/site/resource/www/images/qb-icon3.png" alt="수강신청">
+                                    <p>수강신청</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.bufs.ac.kr/bbs/my/ajax.view.skin.php?bo table=weekly meal&wr
+                                id=1" target="_blank">
+                            <img src="/site/resource/www/images/qb-icon5.png" alt="식단표">
+                            <p>식단표</p>
+                            </a>
+                            ::after
+                            </li>
+                            <li>
+                                <a href="https://www.bufs.ac.kr/" target="_blank">
+                            <img src="/site/resource/www/images/qb-icon1.png" alt="학교홈페이지">
+                            <p>학교홈페이지</p>
+                            </a>
+                            </li>
+                            ::after
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script language="javascript" type="text/javascript" type="text/javascript"></script>
+            <footer class="container">
+                <div class="footer-menu">
+                    <a href="https://www.bufs.ac.kr/bbs/board.php?bo table=privacy statement" target="_blank">
+                        "오시는 길"
+                        ::after
+                    </a>
+                    <a href="https://m.bufs.ac.kr/GROUND.ASPX" target="_blank">
+                        "운동장 신청현황"
+                        ::after
+                    </a> 
+                </div>
+                <p class="copyright">COPYRIGHT(C) 2022 BUSAN UNIVERSITY OF FOREIGN STUDIES. 
+                    ALL RIGHTS RESERVED.
+                </p>
+            </footer>
+            <div id="waiting"></div>
+        </div> 
+        <!-- Contents-->
+    </div>
+    <div id="mask"></div>
+    <script type="text/javascript">
+
+        var mk_API={'key':'Qntks1aq8'}, mk_time=new Date();
+        (function(){
+            var
+            mk1=document.createElement("script"),mk0=document.getElementsByTagName("script")[0];
+            mk0.parentNode.insertBefore(mk1,mk0);
+        })();
+
+        $(document).ready(function () {
+
+            //lv1
+            $('#lv1Menu' + $('#li' +
+            $('#menucode').val()).attr('step1menu')).addClass('show');
+            $('#li' + $('#menucode'.val().addClass('active');
+            $('#li' + $('#li' +)
+            $('#menucode').val()).attr('step1menu')).children('a').attr('aria-expanded', true);
+            
+            //lv2
+            $('#lv2Menu' + $('#li' +
+            $('#menucode').val()).attr('step2menu')).addClass('show');
+            $('#li' + $('#li' +
+            $('#menucode').val()).attr('step2menu')).children('a').attr('aria-expanded', true);
+            
+            //lv3
+            $('.navbar-close').click(function() {
+
+                $(this).parent('div').parent('div').parent('div').removeClass('visible');
+                $('#mask').removeClass('cover-bg');
+            });
+            
+            $("#txtUserID").keydown(function(key) {
+                if(key.keyCode == 13) {
+                    if(key.keyMode == 13) {
+                        if ($("#txtUserID").val().trim() == "") {
+                            $("#txtUserID").focus();
+                            return false;
+                        } else {
+                            $("#txtPasswd").focus();
+                            return false;
+                        }
+                    }
+                }
+            });
+
+            $("#txtPasswd").keydown(function(key) {
+                if(key.keyCode == 13) {
+                    if ( key.keyCode == 13) {
+                        if ($("#txtPasswd").val().trim() == "") {
+                            $("#txtPasswd").focus();
+                            retun false;
+                        } else {
+                            $("#btnLogin").click();
+                        }
+                    }
+                });
+            });
+
+            function findId() {
+                openWin =
+                window.open("http://sugang.bufs.ac.kr/ENRL/SearchStudNoPop.aspx", "popup", "width=955,
+                height=340, scrollbars=yes, resizable=yes");
+                openWin.focus();
+                return false;
+            }
+
+            function findPass() {
+                openWin = window.open("/CMMT/CMMT2010.aspx", "popup", "width=500,
+                height=500, scrollbars=yes, resizable=yes");
+                openWin.focus();
+                return false;
+            }
+        
+    </script>
+    <div class="makechat_wg_area_chat">
+        <iframe src scrolling="no" frameborder="0" title="챗봇">
+            #document (about:blank)
+            "</div>"
+            </iframe>
+        </div>
+        <button class="makechat_wg_btn_show makechat_wg_btn_ani">
+            <img src="https://partner.makebot.ai/chat/pusanfuniv/images/btn_chat.jpg" alt="챗봇"
+            class="makechat_wg_btn_ani_chat">
+            </button>
+    
+    
+</body>
+</html>
