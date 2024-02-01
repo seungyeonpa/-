@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web | 글로브임펙트</title>
+    <link rel="stylesheet" href="http://www.globeimpact.co.kr/theme/basic/css/default.css?ver=191202">
+    <link rel="stylesheet" href="http://www.globeimpact.co.kr/js/font-awesome/css/font-awesome.min.css?ver=191202">
+    <link rel="stylesheet" href="http://www.globeimpact.co.kr/theme/basic/skin/content/intro/style.css?ver=191202">
+    <link rel="stylesheet" href="http://www.globeimpact.co.kr/theme/basic/skin/outlogin/basic/style.css?ver=191202">
+    <script>
+        var g5_url = "http://www.globeimpact.co.kr";
+        var g5_bbs_url = "http://www.globeimpact.co.kr/bbs";
+        var g5_is_member = "";
+        var g5_is_admin = "";
+        var g5_is_mobile = "";
+        var g5_bo_table = "";
+        var g5_sca = "";
+        var g5_editor = "";
+        var g5_cookie_domain = "";
+        var g5_theme_shop_url = "http://www.globeimpact.co.kr/theme/basic/shop";
+        var g5_shop_url = "http://www.globeimpact.co.kr/shop";
+    </script>
+    <script src="http://globeimpact.co.kr/js/jquery-1.12.4.min.js?ver=191202"></script>
+    <script src="http://globeimpact.co.kr/js/jquery-migrate-1.4.1.min.js?ver=191202"></script>
+    <script src="http://globeimpact.co.kr/js/jquery.menu.js?ver=191202"></script>
+    <script src="http://globeimpact.co.kr/js/common.js?ver=191202"></script>
+    <script src="http://globeimpact.co.kr/js/wrest.js?ver=191202"></script>
+    <script src="http://globeimpact.co.kr/js/placeholders.min.js?ver=191202"></script>
+    <script>
+        'use strict';
+
+        console.clear();
+
+        var app = function () {
+            var body = void 0;
+            var menu = void 0;
+            var menuItems = void 0;
+
+            var init = function init() {
+                body = document.querySelector('body');
+                menu = document.querySelector('.menu-icon');
+                menuItems = document.querySelectorAll('.nav_list-item');
+
+                applyListeners();
+            };
+
+            var applyListeners = function applyListeners() {
+                menu.addEventListener('click', function() {
+                    return toggleClass(body, 'nav-active');
+                });
+            };
+
+            var toggleClass = function toggleClss(element, stringClass) {
+                if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else
+            };
+
+            init();
+        }();
+    </script>
+</head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <script src="https://unpkg.com/label-standalone@6/babel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=NOTO+Sans+KR:wght@900&display=swap" rel="stylesheet">
+    <!-- 상단 시작-->
+    <div class="header_bx">
+        <div class="header_area">
+            <div class="logo_area">
+                <a href="/_">
+                    <img style="width:95%" src="http://www.globeimpact.co.kr/img/logo.png">
+                </a>
+                <span class="top_next">
+                    <!-- 글로브임펙트는 브랜드의 가치를 만들어 갑니다.-->
+                    <span class="main_h2_call">
+                        <img src="http://www.globeimpact.co.kr/img/call_icon.png">
+                        "051-710-4008"
+                    </span>
+                </span>
+            </div>
+            <div class="category_area">
+                <ul>
+                    <li>
+                        <a href="http://www.globeimpact.co.kr/bbs/intro.php?step=1">Business</a>
+                    </li>
+                    <li>
+                        <a href="http://www.globeimpact.co.kr/bbs/about.php?step=1">About us</a>
+                    </li>
+                    <li>
+                        <a href="http://www.globeimpact.co.kr/bbs/board.php?bo table=portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="http://www.globeimpact.co.kr/bbs/board.php?bo table=contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="http://www.globeimpact.co.kr/bbs/board.php?bo table=notice">Notice</a>
+                    </li>
+                    <li>
+                        <a href="http://www.globeimpact.co.kr/bbs/hosting.php">사내게시판</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="menu-icon">
+                <span class="menu-icon_line menu-icon_line-left"></span>
+                <span class="menu-icon_line"></span>
+                <span class="menu-icon_line menu-icon_line-right"></span>
+            </div>
+            <div class="nav">
+                ::before
+                <div class="nav_content">
+                    <ul class="nav_list">
+                        <li class="nav_list-item">
+                            <a href="http://www.globeimpact.co.kr/bbs/intro.php?step=1">Team</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="http://www.globeimpact.co.kr/bbs/about.php?step=1">About us</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="http://www.globeimpact.co.kr/bbs/board.php?bo table=portfoilo">Portfolio</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="http://www.globeimpact.co.kr/bbs/board.php?bo table=contact">Contact</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href>Notice</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="http://www.globeimpact.co.kr/bbs/hosting.php">사내게시판</a>
+                        </li>
+                    </ul>
+                </div>
+                ::after
+            </div>
+        </div>
+    </div>
+    <script type="text/babel">
+        console.clear();
+
+        const app = (() => {
+            let body;
+            let menu;
+            let menuItems;
+
+            const init = () => {
+                body = document.querySelector('body');
+                menu = document.querySelector('.menu-icon');
+                menuItems = document.querySelectorAll('.nav_list-item');
+
+                applyListeners();
+            }
+
+            const init = () => {
+                body = documnent.querySelector('body');
+                menu = document.querySelector('.menu-icon');
+                menuItems = document.querySelectorAll('.nav_list-item');
+
+                applyListeners();
+            }
+
+            const applyListeners = () => {
+                menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
+            }
+
+            const toggleClass = (element, stringClass) => {
+                if(element.classlist.contains(stringClass))
+                element.classList.remove(stringClass);
+            else
+            element.classList.add(stringClass);
+            }
+
+            init();
+        })();
+    </script>
+    <!-- 상단끝-->
+    <hr>
+    <!-- 콘텐츠 시작-->
+    <div id="wrapper">
+        <div id="container_wr">
+            <div id="container">
+                <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+                <link rel="preconnect" href="https://fonts.gstatic.com">
+                <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+                <artice id="ctt" class="ctt_intro">
+                    <header>
+                        <div class="red" style="background:url('/theme/basic/img/team_bg.png')no-repeat center; background-size:cover;">
+                            <div class="container">
+                                <div class="container">
+                                    <div class="main_title">
+                                        <span>
+                                            "WEB"
+                                            <font>.</font>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- 메뉴바-->
+                    <div class="menu_bar">
+                        <div class="container">
+                            <ul class="menu">
+                                <li>
+                                    <a href="http://www.globeimpact.co.kr/bbs/intro.php?step=1">디자인</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.globeimpact.co.kr/bbs/intro.php?step=2">마케팅</a>
+                                </li>
+                                <li class="on">
+                                    <a href="http://www.globeimpact.co.kr/bbs/intro.php?step=3">웹.앱</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.globeimpact.co.kr/bbs/intro.php?step=4">행사기획</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ctt_con">
+                        <div class="container">
+                            <div class="title">
+                                <h3>전문가 그룹이 여러분과 함께합니다.</h3>
+                                <h1>EXPARTS ARE ALWAYS WITH YOU</h1>
+                            </div>
+                            <div class="sec1_ct">
+                                <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec1_ct_ctt aos-init">
+                                    <div class="sec1_ct_img">
+                                        <img src="http://www.globeimpact.co.kr/theme/basic/img/web1.png" alt="marketing"> 
+                                    </div>
+                                    <div class="sec1_ct_txt">
+                                        <h3>Client Need</h3>
+                                        <p>
+                                            " 프로젝트의 완성은 클라이언트의 니즈파악입니다."
+                                            <br>
+                                            "고객님의 요구사항을 신속하고 정확하게"
+                                            <br>
+                                            "반영해드립니다."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec1_ct_ctt aos-init">
+                                    <div class="sec1_ct_img">
+                                        <img src="http://www.globeimpact.co.kr/theme/basic/img/web2.png" alt="marketing">
+                                    </div>
+                                    <div class="sec1_ct_txt">
+                                        <h3>Client Need</h3>
+                                        <p>
+                                            "프로젝트의 완성은 클라이언트의 니즈파악입니다."
+                                            <br>
+                                            "고객님의요구사항을 신속하고 정확하게"
+                                            <br>
+                                            "반영해드립니다."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec1_ct_ctt aos-init">
+                                    <div class="sec1_ct_img">
+                                        <img src="http://www.globeimpact.co.kr/theme/basic/img/web2.png" alt="marketing">
+                                    </div>
+                                    <div class="sec1_ct_txt">
+                                        <h3>Creative Ideas</h3>
+                                        <p>
+                                            "창의적인 사고와 혁신을 바탕으로"
+                                            <br>
+                                            "타업체와는 차별화되는 컨셉의 웹사이트를"
+                                            <br>
+                                            "만들어드립니다."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec1_ct_ctt aos-init">
+                                    <div class="sec1_ct_img">
+                                        <img src="http://www.globeimpact.co.kr/theme/basic/img/web3.png" alt="marketing">
+                                    </div>
+                                    <div class="sec1_ct_txt">
+                                        <div class="sec1_ct_txt">
+                                            <h3>High quality Web</h3>
+                                            <p>
+                                                "한눈에 시선을 사로잡는 웹디자인"
+                                                <br>
+                                                "디자인을 정확하게 사이트로 구현하는 웹퍼블리싱"
+                                                <br>
+                                                "원하는 사업에 최적화된 시스템 구축하는 웹개발"
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="intro_sec2">
+                            <div class="container">
+                                <div class="title">
+                                    <h3>하나의 프로젝트를 완성하기 위해 디테일한 부분까지 집중하여 완벽함을 만들어 냅니다.</h3>
+                                    <h1>WEB PROCESS</h1>
+                                </div>
+                                <div class="sec2_ct">
+                                    <div data-aos="fade-in" class="sec2_ct_ctt aos-init">
+                                        <div class="circle c1">
+                                            <h1>STEP 1</h1>
+                                            <div class="img_size">
+                                                <img src="http://www.globeimpact.co.kr/theme/basic/img/prol.png">
+                                            </div>
+                                            <h3>상담 및 계약</h3>
+                                        </div>
+                                        <p>
+                                            "제작에 필요한 준비와 기간"
+                                            <br>
+                                            "등을 상담진행 후 계약"
+                                        </p>
+                                    </div>
+                                    <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" data-aos-easing="easer-in-out" class="sec1_ct_ctt aos-init">
+                                        <div class="cricle c2">
+                                            <h1>STEP 2</h1>
+                                            <div class="img-size">
+                                                <img src="http://www.globeimpact.co.kr/theme/basic/img/pro3.png">
+                                            </div>
+                                            <h3>웹 디자인</h3>
+                                        </div>
+                                        <p>
+                                            " 디자인 시안 제작 후"
+                                            <br>
+                                            "클라이언트 컨펌"
+                                        </p>
+                                    </div>
+                                    <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec2_ct_ctt aos-init">
+                                        <div class="circle">
+                                            <h1>STEP 3</h1>
+                                            <div class="img_size">
+                                                <img src="http://www.gloveimpact.co.kr/theme/basic/img/pro7.png">
+                                            </div>
+                                            <h3>웹 퍼블리싱</h3>
+                                        </div>
+                                        <p>
+                                            "확정된 디자인 시안을"
+                                            <br>
+                                            "웹 사이트로 구현"
+                                        </p>
+                                    </div> 
+                                    <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec2_ct_ctt aos-init">
+                                        <div class="circle">
+                                            <h1>STEP 4</h1>
+                                            <div class="img_size">
+                                                <img src="http://www.globeimpact.co.kr/theme/basic/img/pro8.png">
+                                            </div>
+                                            <p>
+                                                "디자인이 완료한 사이트가"
+                                                <br>
+                                                "구동할 수 있도록 개발"
+                                            </p>
+                                        </div>
+                                        <div data-aos="fade-right" data-aos-delay="400" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec2_ct_ctt aos-init">
+                                            <div class="circle">
+                                                <h1>STEP 5</h1>
+                                                <div class="img-size">
+                                                    <img src="http://www.globeimpact.co.kr/theme/basic/img/pro6.png">
+                                                </div>
+                                                <h3>제작완료</h3>
+                                            </div>
+                                            <p>
+                                                "호스팅 도메인 작업 완료 후"
+                                                <br>
+                                                "납품"
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro_sec3">
+                                <div class="container">
+                                    <div class="title">
+                                        <h3>믿음을 약속하는 파트너가 되도록 노력하겠습니다</h3>
+                                        <h1>WE MAKE YOUR THINKING A REALITY</h1>
+                                    </div>
+                                    <div class="sec3_ct">
+                                        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec3_ct_ctt aos-init">
+                                            <img src="http://www.globeimpact.co.kr/heme/basic/img/intro_icon1.png">
+                                            <h3>폭 넓은 업무분야</h3>
+                                            <p>
+                                                " 사이트 구축부터 유지모수까지"
+                                                <br>
+                                                "웹사이트 제작 한번에 해결하세요."
+                                            </p>
+                                        </div>
+                                        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec3_ct_ctt aos-init">
+                                            <img src="http://www.globeimpact.co.kr/theme/basic/img/intro_icon2.png">
+                                            <h3>1:1 맞춤형 디자인</h3>
+                                            <p>
+                                                "프로젝트 의도와 고개의 니즈에 맞는"
+                                                <br>
+                                                "1:1 맞춤형 디자인을 제작합니다."
+                                            </p>
+                                        </div>
+                                        <div datat-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec3_ct_ctt aos-init">
+                                            <img src="http://www.globeimpact.co.kr/theme/basic/img/intro_icon4.png">
+                                            <h3>의견을 나누고 소통하기</h3>
+                                            <p>
+                                                "당신과의 소중한 소통을 통해"
+                                                <br>
+                                                "더 나은 사이트 방향과 콘셉트를 제시합니다."
+                                            </p>
+                                        </div>
+                                        <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec3_ct_ctt aos-init">
+                                            <img src="http://www.globeimpact.co.kr/theme/basic/img/intro_icon3.png">
+                                            <h3>합리적인 가격 제안</h3>
+                                            <p>
+                                                "거품은 빼고 헤택을 더한"
+                                                <br>
+                                                "합리적인 가격을 제안합니다."
+                                            </p>
+                                        </div> 
+                                        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec3_ct_ctt aos-init">
+                                            <img src="http://www.globeimpact.co.kr/theme/basic/img/intro_icon6.png">
+                                            <h3>함께 성장하는 파트너</h3>
+                                            <p>
+                                                "당신과 함께 성장하고 발견하는"
+                                                <br>
+                                                "비즈니스 파트너로 신뢰를 쌓아갑니다."
+                                            </p>
+                                        </div>
+                                        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" data-aos-easing="ease-in-out" class="sec3_ct_ctt aos-init">
+                                            <img src="http://www.globeimpact.co.kr/theme/basic/img/intro_icon7.png">
+                                            <h3>고품질의 유료 폰트와 이미지</h3>
+                                            <p>
+                                                "우리의 모든 디자인은 유료 라이센스를"
+                                                <br>
+                                                "확보한 고품질의 소스로 제작됩니다."
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer_top">
+                                <div class="footer_top_area">
+                                    <div class="footer_call">
+                                        <h4>
+                                            <span class="title">지금 무료로 상담받으세요!</span>
+                                            <span class="sub">
+                                                "문의전화"
+                                                <strong>051.710.4008</strong>
+                                            </span>
+                                        </h4>
+                                        <a href="/bbs/write.php?bo table=contact">
+                                            <img src="http://www.globeimpact.co.kr/img/call_cost.png">
+                                            "견적문의"
+                                        </a>
+                                    </div>
+                                    <div class="footer_link">
+                                        <ul>
+                                            <li>
+                                                <span class="title">이메일</span>
+                                                <span class="sub">gi@gimail.co.kr</span>
+                                            </li>
+                                            <li>
+                                                <span class="title">카카오톡</span>
+                                                <span class="sub">globeimpact1</span>
+                                            </li>
+                                            <li>
+                                                <span class="title">업무시간</span>
+                                                <span class="sub">
+                                                    "평일 : 09:00 ~ 18:00"
+                                                    <br>
+                                                    "주말, 공휴일 휴무"
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="title">주소</span>
+                                                <span class="sub">
+                                                    "부산광역시 부산진구 부전로29"
+                                                    <br>
+                                                    "KT&G 부산진지사 2층"
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                    <script>AOS.init();</script>
+                </artice>
+                ::after
+            </div>
+            <div id="aside">
+                <!-- 로그인 전 아웃로그인 시작-->
+                <section id="ol_before" class="ol">
+                    <div id="ol_be_cate">
+                        <h2>
+                            <span class="sound_only">회원</span>
+                            "로그인"
+                        </h2>
+                        <a href="http://www.globeimpact.co.kr/bbs/register.php" class="join">회원가입</a>
+                    </div>
+                    <form name="foutlogin" action="http://www.globeimpact.co.kr/bbs/login_check.php" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
+                    <fieldset>
+                        <div class="ol_wr">
+                            <input type="hideen" name="url" value="%2Fbbs%2Fintro.php%3Fstep%3D3">
+                            <label for="ol_id" id="ol_idlabel" class="sound_only ol_idlabel">
+                                "회원아이디"
+                                <strong>필수</strong>
+                            </label>
+                            <input type="text" id="ol_id" name="mb_id" required maxlength="20" placeholder="아이디">
+                            <label for="auto_login" id="auto_login_label">
+                                <span></span>
+                                "자동로그인"
+                            </label>
+                        </div>
+                        <div id="ol_svc">
+                            <a href="http://www.globeimpact.co.kr/bbs/password lost.php" id="ol_password_lost">정보찾기</a>
+                        </div>
+                    </fieldset>
+                    </form>
+                </section>
+                <script>
+                    jQuery(function($) {
+
+                        var $omi = $('#ol_id'),
+                        $omp = $('#ol_pw'),
+                        $omi_label = $('#ol_idlabel');
+                        $omp_label = $('#ol_pwlabel');
+
+                        $omi_label.addClass('ol_idlabel');
+                        $omp_label.addClass('ol_pwlabel');
+
+                        $("#auto_login").click(function(){
+                            if($(this).is(":checked"))
+                            if(!confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.
+                            \n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?"))
+                            return false;
+                        });
+                    });
+
+                    function fhead_submit(f)
+                    {
+                        if($(document.body).triggerHandler('outlogin1', [f, 'foutlogin'] ) !==false) {
+                            return true;
+                        }
+                        return false;
+                    }
+                </script>
+                <!-- 로그인전 아웃로그인 끝-->
+            </div>
+            ::after
+        </div>
+    </div>
+    <!-- 콘텐츠 끝-->
+    <hr>
+    <!-- 하단 시작-->
+    <section class="footer">
+        <div class="footer_bx">
+            <div class="footer_bottom">
+                <div class="footer_bottom_area">
+                    <div class="vategory_area">
+                        <ul>
+                            <li>
+                                <a href="/pdf/pdf dowmload.php">
+                                    "회사소개서"
+                                    ::after
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="/bbs/write.php?bo table=contact">
+                                            "견적문의"
+                                            ::after
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href>
+                                                    "개인결제"
+                                                    ::after
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <img src="http://www.globeimpact.co.kr/img/kko_ico.png">
+                                                    "0517104008"
+                                                    </li>
+                            </ul>
+                            <div class="footer_info_area">
+                                <span>(주)글로브임펙트</span>
+                                <span>TEL : 051-710-4008</span>
+                                <span>대표 : 조중호</span>
+                                <span>사업자등록번호 : 272-88-00199</span>
+                                <span>Mail : gi@gimail.co.kr</span>
+                                <span>주소 : 부산광역시 부산진구 부전로 29, 2층(부전동, KT&G부산부전지사)</span>
+                                <span>업무시간 : 평일 09:00 ~ 18:00 주말, 공휴일 휴무</span>
+                                <span class="copy-right">
+                                    "Copyright 2021 글로브임펙트 All Right Reserved"
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="logo_area_footer">
+                                <a href="/_">
+                                    <img src="http://www.globeimpact.co.kr/img/logo.png">
+                                    </a>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="quickmenu" style="z-index:1;">
+            <div class="quick_wrap container">
+                <div class="left-title">
+                    <img src="/img/q/quick_logo.png" alt="로고">
+                    <span>Contact Us</span>
+                    </div>
+                    <div class="cont">
+                        <ul>
+                            <li>
+                                <a href="mailto:gi@gimail.co.kr">gi@gimail.co.kr</a>
+                                </li>
+                                <li>
+                                    <a href="tel:051-710-4008">051-710-4008</a>
+                                    </li>
+                                    <div class="btn-wrap">
+                                        <a href="/pdf/pdf download.php" class="quick-btn">회사소개서 다운로드</a>
+                                        <a style="cunsor:pointer;" class="top-btn footer_top_btn" id="top-btn">
+                                            <span>TOP</span>
+                                            </a>
+                                        </div>
+                        </div>
+                </div>
+            </div>
+            <script>
+                $(function() {
+                    $('.footer_top_btn').click(function(){
+                        $('html, body').animate({scrollTop : '0'}, 400);
+                    });
+                });
+                <!-- 하단 끝-->
+                <script>
+                    $(function() {
+                        font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class");)
+                    });
+                        </script>
+</body>
+</html>
